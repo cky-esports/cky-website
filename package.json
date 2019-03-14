@@ -1,0 +1,70 @@
+{
+  "name": "@cky-website/source-code",
+  "private": true,
+  "author": "Brian Le",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Source code for CKY - eSports' website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cky-esports/cky-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cky-esports/cky-website/issues"
+  },
+  "homepage": "https://github.com/cky-esports/cky-website#readme",
+  "scripts": {
+    "client:dev": "cd packages/client && yarn run dev",
+    "client:start": "cd packages/client && yarn run start",
+    "restful-api:dev": "cd packages/restful-api && yarn run dev",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test jest --watch",
+    "test:watchAll": "cross-env NODE_ENV=test BABEL_ENV=test jest --watchAll",
+    "test:coverage": "cross-env NODE_ENV=test BABEL_ENV=test jest --coverage",
+    "snapshot:update": "cross-env NODE_ENV=test BABEL_ENV=test jest --updateSnapshot",
+    "lint": "eslint ./ --cache --report-unused-disable-directives && echo \"No errors found\"",
+    "lint:fix": "eslint ./ --cache --fix && echo \"No errors found\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.3.1",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-import-resolver-babel-module": "^5.0.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-react-hooks": "^1.5.0",
+    "jest": "^24.1.0",
+    "lerna": "^3.11.0",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1",
+    "html-loader": "^0.5.5",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "clean-webpack-plugin": "^2.0.0",
+    "webpack-bundle-analyzer": "^3.1.0",
+    "dotenv-webpack": "^1.7.0",
+    "webpack-dev-server": "^3.1.14",
+    "redux-mock-store": "^1.5.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

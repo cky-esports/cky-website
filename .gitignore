@@ -1,0 +1,10 @@
+# Dependencies
+node_modules
+
+# Misc
+.DS_STORE
+.env
+yarn-error.log
+dist
+coverage
+.eslintcache
